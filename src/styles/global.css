@@ -1,6 +1,189 @@
-/* src/styles/global.css */
+/* Google Font: Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* You can add additional custom styling here if needed */
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #FFF5F6 0%, #FFE4E6 30%, #F8D7DA 60%, #F7C6C7 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
+  color: #5C3D4A;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFF5F6;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #F7C6C7;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF6B8A;
+}
+
+/* Fade-in animation for staggered cards */
+.animate-stagger {
+  opacity: 0;
+  animation: slideUp 0.5s ease-out forwards;
+}
+
+.animate-stagger:nth-child(1) { animation-delay: 0.1s; }
+.animate-stagger:nth-child(2) { animation-delay: 0.2s; }
+.animate-stagger:nth-child(3) { animation-delay: 0.3s; }
+.animate-stagger:nth-child(4) { animation-delay: 0.4s; }
+.animate-stagger:nth-child(5) { animation-delay: 0.5s; }
+.animate-stagger:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Glassmorphism card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.glass-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(247, 198, 199, 0.5);
+  background: rgba(255, 255, 255, 0.85);
+}
+
+/* Cart drawer overlay */
+.drawer-overlay {
+  background: rgba(92, 61, 74, 0.4);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+/* Floating button pulse */
+.cart-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.cart-float:hover {
+  animation: none;
+  transform: scale(1.1);
+}
+
+/* Button styles */
+.btn-pink {
+  background: linear-gradient(135deg, #FF6B8A 0%, #E84575 100%);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(232, 69, 117, 0.3);
+}
+
+.btn-pink:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(232, 69, 117, 0.45);
+}
+
+.btn-pink:active {
+  transform: translateY(0);
+}
+
+/* Zalo button */
+.btn-zalo {
+  background: linear-gradient(135deg, #0068FF 0%, #0052CC 100%);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 14px 24px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 104, 255, 0.3);
+  width: 100%;
+}
+
+.btn-zalo:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 104, 255, 0.45);
+}
+
+/* Badge */
+.cart-badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: linear-gradient(135deg, #FF6B8A 0%, #E84575 100%);
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+}
+
+/* Profile ring */
+.profile-ring {
+  background: linear-gradient(135deg, #FF6B8A, #F7C6C7, #FF6B8A);
+  padding: 4px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Sparkle decorations */
+.sparkle::before,
+.sparkle::after {
+  content: '✨';
+  position: absolute;
+  font-size: 1.2rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+.sparkle::before {
+  top: -10px;
+  left: -15px;
+  animation-delay: 0.5s;
+}
+
+.sparkle::after {
+  bottom: -10px;
+  right: -15px;
+  animation-delay: 1s;
+}

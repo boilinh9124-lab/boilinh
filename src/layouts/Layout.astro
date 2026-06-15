@@ -1,51 +1,48 @@
 ---
 import "../styles/global.css";
-import Footer from "../components/Footer.astro";
 
 export interface Props {
   title?: string;
   description?: string;
-  creator?: string;
-  repoLink?: string;
 }
 
 const {
-  title = "AstroLinks Template", 
-  description = "A simple Link-In-Bio template built with Astro & Tailwind CSS.", 
-  creator = "Cyn Review", 
-  repoLink = "https://github.com/JPerez00/astrolink"
+  title = "Cyn Review - Review & Chia Sẻ Sản Phẩm Yêu Thích", 
+  description = "Cyn Review - Trang review và chia sẻ những sản phẩm yêu thích, deal hot mỗi ngày 💕", 
 } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en" class="h-full antialiased">
+<html lang="vi">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     
+    <!-- SEO -->
     <title>{title}</title>
-    {description && <meta name="description" content={description} />}
-    {creator && <meta name="author" content={creator} />}
-    {repoLink && <meta name="repoLink" content={repoLink} />}
-
-    <!-- Pre-emptive script to avoid flash of incorrect theme -->
-    <script>
-      if (
-        localStorage.theme === 'dark' ||
-        (!('theme' in localStorage) &&
-          window.matchMedia('(prefers-color-scheme: dark)').matches)
-      ) {
-        document.documentElement.classList.add('dark');
-      } else {
-        document.documentElement.classList.remove('dark');
-      }
-    </script>
+    <meta name="description" content={description} />
+    <meta name="author" content="Cyn Review" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#F8D7DA" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   </head>
 
-  <body class="min-h-screen flex flex-col m-0 mx-5 lg:mx-auto bg-zinc-100 dark:bg-zinc-950 text-zinc-800 dark:text-zinc-100">
+  <body class="min-h-screen flex flex-col font-poppins">
     <slot />
-    <Footer />
+    
+    <!-- Footer -->
+    <footer class="mt-auto py-6 text-center">
+      <p class="text-pastel-muted text-sm font-medium">
+        © 2026 Cyn Review · Made with 💕
+      </p>
+    </footer>
   </body>
 </html>

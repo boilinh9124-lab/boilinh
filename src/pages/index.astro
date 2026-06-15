@@ -1,102 +1,112 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { Icon } from "astro-icon/components";
 import TypewriterText from "../components/TypewriterText.jsx";
-import ToggleTheme from "../components/ToggleTheme.jsx";
 
 const links = [
   {
     name: "Bút Gel Mực Nước TakeNote (Set 36 Bút)",
-    url: "https://shopee.vn/product/1366221078/26327704279?credential_token=8wEwiDL7YDtvaGuTQEQqFNFv6uhKz8Ro6UDFYJSwWx&exp_group=rollout&gads_t_sig=gqRjZGVrxHCFomtpsTE0MjUxOnRzc19zZGtfa2V5omt20QABpGFsZ2_SAAAAZKNkZWvAomN0xEAAAAAMfaLqlfFS4JwQPCoOJZHE2YMfq1tWF61pnIIHqGuyOlpkjBotHu7Xpb0YRK1tULWVZdcpI_r9hw6jgE9CqmNpcGhlcnRleHTElQAAAAzs4c5f2NqfKYip-aaax1xxO2P7b6-W0cCvWeHdgqCh-pobF-TeS9ad8ml5HcQQ5fSRZsFuz77nUdR25nrU3ap2QU9xMt7qF6qejnlFaU73tjU19yVEA-4ylsj19x7nu3g8tHa84QvU2iBJ7YHiTZA7R2OsXbbhTFF-M2FB_2-LgXqiLsXR0JwB0RiulnhF5yzg&mmp_pid=an_17351310511&uls_trackid=55t26rrd00db&utm_campaign=id_zI0xmEhbgb&utm_content=----&utm_medium=affiliates&utm_source=an_17351310511&utm_term=f2qhm7ip9wq9",
-    icon: "shopee",
+    url: "https://shopee.vn/product/1366221078/26327704279?credential_token=8wEwiDL7YDtvaGuTQEQqFNFv6uhKz8Ro6UDFYJSwWx&exp_group=rollout&mmp_pid=an_17351310511&uls_trackid=55t26rrd00db&utm_campaign=id_zI0xmEhbgb&utm_content=----&utm_medium=affiliates&utm_source=an_17351310511&utm_term=f2qhm7ip9wq9",
+    image: "/products/but-gel.png",
   },
   {
     name: "Má Hồng Kem OFÉLIA Lolli Liquid Blush (4.6g)",
-    url: "https://shopee.vn/product/108276104/10859341175?credential_token=8wEwiDL7Xp1hYEkWSKVeJWwhL4DccaNFCAtWvYgijA&exp_group=rollout&gads_t_sig=gqRjZGVrxHCFomtpsTE0MjUxOnRzc19zZGtfa2V5omt20QABpGFsZ2_SAAAAZKNkZWvAomN0xEAAAAAMfaLqlfFS4JwQPCoOJZHE2YMfq1tWF61pnIIHqGuyOlpkjBotHu7Xpb0YRK1tULWVZdcpI_r9hw6jgE9CqmNpcGhlcnRleHTEkwAAAAyyeva7Cc9-rEdtH8is6gunIH_mWT7PM6pkigiN_XFHbivqVhClJHjiWlSqZzJs0SgkdTGQ9xuiXIDnRS2Vdsg2g8DAk95voRaqtiXsWL7xdiquVB78S4yrOv1I0Zt3JuCRsYhwseR8OW74HQNg9-ImVppwFk4sH0vm0rjI-92ANjxog4kc1-MruC6Qh0cAeQ&mmp_pid=an_17351310511&uls_trackid=55t288nk01eg&utm_campaign=id_9GHQbTYf93&utm_content=----&utm_medium=affiliates&utm_source=an_17351310511&utm_term=f2qiowcm8cs9",
-    icon: "shopee",
+    url: "https://shopee.vn/product/108276104/10859341175?credential_token=8wEwiDL7Xp1hYEkWSKVeJWwhL4DccaNFCAtWvYgijA&exp_group=rollout&mmp_pid=an_17351310511&uls_trackid=55t288nk01eg&utm_campaign=id_9GHQbTYf93&utm_content=----&utm_medium=affiliates&utm_source=an_17351310511&utm_term=f2qiowcm8cs9",
+    image: "/products/ma-hong.png",
   },
   {
     name: "Phấn Bắt Sáng FLORTTE Glass Sea Series",
     url: "https://sl1nk.com/rdz66b5",
-    icon: "shopee",
+    image: "/products/phan-bat-sang.png",
   },
   {
     name: "Son Bóng 3D fwee Voluming Gloss (5.3g)",
     url: "https://sl1nk.com/n9yoeee",
-    icon: "shopee",
+    image: "/products/son-bong.png",
   },
   {
-    name: "My Developer Portfolio",
-    url: "https://www.jorge-perez.dev/",
-    icon: "terminal",
+    name: "Má Hồng Kem AZTK",
+    url: "https://sl1nk.com/cbn1ipn",
+    image: "/products/ma-hong-aztk.png",
   },
   {
-    name: "GitHub",
-    url: "https://github.com/JPerez00",
-    icon: "github",
-  },
-  {
-    name: "LinkedIn",
-    url: "https://www.linkedin.com/in/jperez0/",
-    icon: "linkedin",
-  },
-  {
-    name: "Twitter / X",
-    url: "https://x.com/jperezverse",
-    icon: "twitter",
-  },
-  {
-    name: "Instagram",
-    url: "https://www.instagram.com/lensgrime/",
-    icon: "instagram",
-  },
-  {
-    name: "My Gumroad Store",
-    url: "https://jorgeperez.gumroad.com/",
-    icon: "gumroad",
+    name: "Kem Tạo Khối SHEGLAM",
+    url: "https://l1nq.com/wgxgetz",
+    image: "/products/kem-tao-khoi-sheglam.png",
   },
 ];
 ---
 
-<Layout title="Cyn Review">
-  <main
-    class="mt-4 md:mt-8 mx-auto w-full max-w-xl text-center"
-  >
-    <div class="text-end">
-      <ToggleTheme client:load />
-    </div>
+<Layout title="Cyn Review - Sản Phẩm Yêu Thích 💕">
+  <main class="mt-6 mx-auto w-full max-w-lg px-4 pb-12">
 
-    <!-- Profile Image -->
-    <img
-      src="/portrait.webp"
-      alt="Profile Picture"
-      class="w-28 h-28 md:w-32 md:h-32 rounded-full mx-auto mb-4 object-cover shadow ring-1 ring-zinc-400 dark:ring-zinc-700"
-    />
-
-    <!-- Header / Name -->
-    <div class="flex items-center justify-center mb-1.5">
-      <h1 class="text-2xl font-bold text-zinc-900 dark:text-white tracking-tight">Cyn Review</h1>
-        <div class="ml-1.5 mt-1.5">
-          <img class="w-4 h-4" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik04LjUyNDcgMTUuMTIzNEM4LjIwMyAxNC45MjUxIDcuNzk3IDE0LjkyNTEgNy40NzUzIDE1LjEyMzRMNy4xNDg3MyAxNS4zMjQ3QzYuNjk0MiAxNS42MDQ4IDYuMDk5NzQgMTUuNDc4NSA1Ljc5ODQ1IDE1LjAzNzdMNS41ODE5OSAxNC43MjFDNS4zNjg3NSAxNC40MDkgNC45OTc4NSAxNC4yNDM4IDQuNjIzMzIgMTQuMjk0MUw0LjI0MzExIDE0LjM0NTJDMy43MTM5MiAxNC40MTYyIDMuMjIyMjYgMTQuMDU5IDMuMTI2MzEgMTMuNTMzOEwzLjA1NzM3IDEzLjE1NjRDMi45ODk0NyAxMi43ODQ3IDIuNzE3OCAxMi40ODMgMi4zNTUxOSAxMi4zNzY2TDEuOTg3MDkgMTIuMjY4NkMxLjQ3NDc1IDEyLjExODIgMS4xNzA4OCAxMS41OTE5IDEuMjk2ODcgMTEuMDczMUwxLjM4NzM4IDEwLjcwMDNDMS40NzY1NSAxMC4zMzMgMS4zNTEwOSA5Ljk0NjkyIDEuMDYzMSA5LjcwMjI0TDAuNzcwNzU3IDkuNDUzODVDMC4zNjM4NTIgOS4xMDgxMyAwLjMwMDMyNyA4LjUwMzczIDAuNjI2NDYyIDguMDgwOTZMMC44NjA3NzcgNy43NzcyMkMxLjA5MTYgNy40NzgwMSAxLjEzNDA0IDcuMDc0MjQgMC45NzA0NjggNi43MzM1OEwwLjgwNDQyNCA2LjM4Nzc2QzAuNTczMzE0IDUuOTA2NDMgMC43NjExMTQgNS4zMjg0NCAxLjIzMTAxIDUuMDc0ODhMMS41Njg2MSA0Ljg5MjdDMS45MDExNyA0LjcxMzI0IDIuMTA0MTcgNC4zNjE2NCAyLjA5MzMgMy45ODM5TDIuMDgyMjcgMy42MDA0NEMyLjA2NjkyIDMuMDY2NzIgMi40NzM1NyAyLjYxNTA5IDMuMDA1OTcgMi41NzQ1N0wzLjM4ODQ4IDIuNTQ1NDZDMy43NjUyOSAyLjUxNjc4IDQuMDkzNzUgMi4yNzgxNCA0LjIzNzQ2IDEuOTI4NjRMNC4zODMzNSAxLjU3Mzg1QzQuNTg2NCAxLjA4MDAyIDUuMTQxNiAwLjgzMjgzNiA1LjY0NDQ1IDEuMDEyMzdMNi4wMDU3MyAxLjE0MTM1QzYuMzYxNjMgMS4yNjg0MiA2Ljc1ODc1IDEuMTg0MDEgNy4wMzIxOSAwLjkyMzE3M0w3LjMwOTc4IDAuNjU4MzkxQzcuNjk2MTMgMC4yODk4NTIgOC4zMDM4NyAwLjI4OTg1MiA4LjY5MDIyIDAuNjU4MzkyTDguOTY3ODEgMC45MjMxNzNDOS4yNDEyNSAxLjE4NDAxIDkuNjM4MzcgMS4yNjg0MiA5Ljk5NDI3IDEuMTQxMzVMMTAuMzU1NSAxLjAxMjM3QzEwLjg1ODQgMC44MzI4MzYgMTEuNDEzNiAxLjA4MDAyIDExLjYxNjcgMS41NzM4NUwxMS43NjI1IDEuOTI4NjRDMTEuOTA2MyAyLjI3ODE0IDEyLjIzNDcgMi41MTY3OCAxMi42MTE1IDIuNTQ1NDZMMTIuOTk0IDIuNTc0NTdDMTMuNTI2NCAyLjYxNTA5IDEzLjkzMzEgMy4wNjY3MiAxMy45MTc3IDMuNjAwNDRMMTMuOTA2NyAzLjk4MzlDMTMuODk1OCA0LjM2MTY0IDE0LjA5ODggNC43MTMyNCAxNC40MzE0IDQuODkyN0wxNC43NjkgNS4wNzQ4OEMxNS4yMzg5IDUuMzI4NDQgMTUuNDI2NyA1LjkwNjQzIDE1LjE5NTYgNi4zODc3NkwxNS4wMjk1IDYuNzMzNThDMTQuODY2IDcuMDc0MjQgMTQuOTA4NCA3LjQ3ODAxIDE1LjEzOTIgNy43NzcyMkwxNS4zNzM1IDguMDgwOTZDMTUuNjk5NyA4LjUwMzczIDE1LjYzNjEgOS4xMDgxMyAxNS4yMjkyIDkuNDUzODVMMTQuOTM2OSA5LjcwMjI0QzE0LjY0ODkgOS45NDY5MiAxNC41MjM0IDEwLjMzMyAxNC42MTI2IDEwLjcwMDNMMTQuNzAzMSAxMS4wNzMxQzE0LjgyOTEgMTEuNTkxOSAxNC41MjUzIDEyLjExODIgMTQuMDEyOSAxMi4yNjg2TDEzLjY0NDggMTIuMzc2NkMxMy4yODIyIDEyLjQ4MyAxMy4wMTA1IDEyLjc4NDcgMTIuOTQyNiAxMy4xNTY0TDEyLjg3MzcgMTMuNTMzOEMxMi43Nzc3IDE0LjA1OSAxMi4yODYxIDE0LjQxNjIgMTEuNzU2OSAxNC4zNDUyTDExLjM3NjcgMTQuMjk0MUMxMS4wMDIxIDE0LjI0MzggMTAuNjMxMyAxNC40MDkgMTAuNDE4IDE0LjcyMUwxMC4yMDE1IDE1LjAzNzdDOS45MDAyNiAxNS40Nzg1IDkuMzA1OCAxNS42MDQ4IDguODUxMjcgMTUuMzI0N0w4LjUyNDcgMTUuMTIzNFoiIGZpbGw9IiMwMEI2RkYiLz4KPHBhdGggZD0iTTUuMDY5OTggNy41NjI2NUw3LjE5MTMgOS42ODM5N0wxMS40MzM5IDUuNDQxMzMiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMiIvPgo8L3N2Zz4K" alt="Verified profile" data-testid="verificationTick">
+    <!-- Header Section -->
+    <header class="text-center mb-8 animate-fade-in">
+      <!-- Profile Avatar -->
+      <div class="flex justify-center mb-4">
+        <div class="profile-ring">
+          <img
+            src="/portrait.webp"
+            alt="Cyn Review Avatar"
+            class="w-24 h-24 md:w-28 md:h-28 rounded-full object-cover"
+            id="profile-avatar"
+          />
         </div>
+      </div>
+
+      <!-- Shop Name -->
+      <div class="flex items-center justify-center gap-1.5 mb-2">
+        <h1 class="text-2xl md:text-3xl font-bold text-pastel-text tracking-tight">
+          Cyn Review
+        </h1>
+        <!-- Verified Badge -->
+        <svg class="w-5 h-5 mt-0.5" viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="10" fill="#FF6B8A"/>
+          <path d="M8 12.5l2.5 2.5L16 9.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+
+      <!-- Description -->
+      <p class="text-pastel-muted text-sm mb-2">
+        Review & Chia sẻ sản phẩm yêu thích 💕
+      </p>
+
+      <!-- Typewriter -->
+      <TypewriterText client:load />
+    </header>
+
+    <!-- Decorative Divider -->
+    <div class="flex items-center justify-center gap-3 mb-6">
+      <div class="h-px flex-1 bg-gradient-to-r from-transparent to-pastel-rose"></div>
+      <span class="text-pastel-rose text-sm font-medium">✨ Sản phẩm nổi bật ✨</span>
+      <div class="h-px flex-1 bg-gradient-to-l from-transparent to-pastel-rose"></div>
     </div>
 
-    <!-- Typewriter subheader: hydrated on page load -->
-    <TypewriterText client:load />
-
-    <!-- Links -->
-    <div class="mt-6 flex flex-col gap-4">
+    <!-- Product Links -->
+    <div class="flex flex-col gap-3">
       {links.map((link) => (
         <a
           href={link.url}
           target="_blank"
           rel="noopener noreferrer"
-          class="text-base flex items-center justify-center gap-1 px-4 py-3.5 rounded-full bg-white dark:bg-zinc-900 ring-1 ring-zinc-300 dark:ring-zinc-700  hover:bg-zinc-200  dark:hover:bg-zinc-700 text-zinc-800 dark:text-white font-medium shadow hover:shadow-md"
+          class="glass-card rounded-2xl overflow-hidden animate-stagger block"
         >
-          <Icon name={link.icon} class="w-5 h-5" aria-label={link.name} />
-          {link.name}
+          <div class="flex items-center gap-3 p-2.5">
+            <img
+              src={link.image}
+              alt={link.name}
+              class="w-16 h-16 rounded-xl object-cover flex-shrink-0"
+              loading="lazy"
+            />
+            <span class="text-sm font-semibold text-pastel-text leading-tight flex-1">
+              {link.name}
+            </span>
+            <svg class="w-4 h-4 text-pastel-muted flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+          </div>
         </a>
       ))}
     </div>
+
   </main>
 </Layout>
